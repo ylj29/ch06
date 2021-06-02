@@ -28,8 +28,8 @@ export class AppComponent {
   constructor(private fb: FormBuilder){
     this.myForm = this.fb.group(
       {
-        'userName' : ['aaa', Validators.compose([Validators.required,userNameValidator,Validators.minLength(7)])],
-        'password' : ['', Validators.compose([Validators.required, Validators.minLength(6)])]
+        'userName' : ['', Validators.compose([Validators.required, Validators.minLength(3),Validators.maxLength(20)])],
+        'password' : ['', Validators.compose([Validators.required, Validators.minLength(6),Validators.maxLength(16)])]
       }
     );
 
